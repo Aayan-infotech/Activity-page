@@ -151,6 +151,7 @@ section p {
     display: flex;
     align-items: center;
     margin-top: 5%;
+    
 }
 .capsule-activity img {
     width: 20%;
@@ -552,7 +553,7 @@ footer p {
     .capsule-activity img,
     .capsule-box img {
         width: 100%;
-        margin-bottom: 15px;
+        
         border-radius: 100px;
     }
 
