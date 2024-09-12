@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+    body {
+        background-color: #ebffdf;
+        font-family: 'Poppins', sans-serif;
+
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand weight700" href="#">Activity Planner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li> -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#events">Upcomming Events</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#places">Places</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#download">Download App</a>
+                    </li>
+                </ul>
+                <a class="btn btn-success" href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="px-5 hero-section d-flex align-items-center  justify-content-between">
+        <div class="text-center ">
+            <h1 class="weight700">A place where you can track all Activities & Events.</h1>
+            <p>Centralize your event planning and tracking for a more organized and stress-free experience.</p>
+        </div>
+        <img src="/imgs/hero-bg.png" alt="" width="100%" height="100%">
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="">
+        <div class="">
+            <h2 class="text-center mb-5 display-5 text-decoration-underline py-2 weight700">About Activity Planner</h2>
+            <div class="mx-5">
+                <img src="/imgs/about.png" alt="">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at risus vulputate, fermentum
+                    sapien ac, tempor enim. Sed vehicula, metus nec consequat facilisis, libero est tincidunt turpis, a
+                    blandit arcu turpis ac urna. Vivamus egestas justo nec dui luctus, nec tempor elit vestibulum. Fusce
+                    posuere, lorem vel vehicula sollicitudin, purus magna aliquam nisl, eget dictum sem metus ut erat.
+                    Quisque sodales ligula sed velit consequat, ut lacinia ligula ultricies. Etiam congue, nulla nec
+                    fermentum luctus, justo elit eleifend urna, eget tincidunt odio risus non neque.
+                    Integer at sem in sapien facilisis fermentum. Aliquam malesuada ipsum a nibh vehicula, et aliquet
+                    nisi faucibus. Duis euismod, lectus eu pellentesque posuere, eros augue suscipit mi, a ultricies
+                    libero dui nec leo..</p>
+            </div>
+            <!-- Add more content as needed -->
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-5">
+        <div class="">
+            <h2 class="text-center mb-5 display-5 text-decoration-underline py-2 weight700">Activities</h2>
+            <div class="d-flex justify-content-around mb-4">
+                <!-- Filter buttons -->
+                <button id="indoor-btn" class="btn actbtn active fs-4" onclick="loadActivities('indoor')">Indoor
+                    Activity</button>
+                <button id="outdoor-btn" class="btn actbtn fs-4" onclick="loadActivities('outdoor')">Outdoor
+                    Activity</button>
+            </div>
+            <!-- Activity items -->
+            <div class="container my-5" id="activities-container">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-5">
+        <div class="">
+            <h2 class="text-center mb-5 display-5 text-decoration-underline  py-2 weight700">Upcoming Events</h2>
+            <div class="">
+                <!-- Event items -->
+                <div class="container my-4">
+                    <div class="capsule-box">
+                        <img src="/imgs/event-1.png" alt="Placeholder Image" class="img-fluid">
+                        <div class="content ms-3">
+                            <h3 class="display-6 weight500">Event Number 1</h3>
+                            <p>This is the event number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the
+                                event number 1 Lorem ipsum dolor sit amet, consectetur adipiscing, This is the event
+                                number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the event number 1
+                                Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more events as needed -->
+                <div class="container my-4">
+                    <div class="capsule-box">
+                        <img src="/imgs/event-2.png" alt="Placeholder Image" class="img-fluid">
+                        <div class="content ms-3">
+                            <h3 class="display-6 weight500">Event Number 2</h3>
+                            <p>This is the event number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the
+                                event number 1 Lorem ipsum dolor sit amet, consectetur adipiscing, This is the event
+                                number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the event number 1
+                                Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more events as needed -->
+                <div class="container my-4">
+                    <div class="capsule-box">
+                        <img src="/imgs/event-3.png" alt="Placeholder Image" class="img-fluid">
+                        <div class="content ms-3">
+                            <h3 class="display-6 weight500">Event Number 3</h3>
+                            <p>This is the event number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the
+                                event number 1 Lorem ipsum dolor sit amet, consectetur adipiscing, This is the event
+                                number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the event number 1
+                                Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more events as needed -->
+                <div class="container my-4">
+                    <div class="capsule-box">
+                        <img src="/imgs/event-4.png" alt="Placeholder Image" class="img-fluid">
+                        <div class="content ms-3">
+                            <h3 class="display-6 weight500">Event Number 4</h3>
+                            <p>This is the event number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the
+                                event number 1 Lorem ipsum dolor sit amet, consectetur adipiscing, This is the event
+                                number 1 Lorem ipsum dolor sit amet, consectetur adipiscingThis is the event number 1
+                                Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more events as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Section -->
+    <section id="places" class="pt-5">
+        <div class="">
+            <h2 class="text-center mb-5 display-5 text-decoration-underline py-2  weight700">Places</h2>
+            <!-- Carousel -->
+            <!-- <div id="placesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="place1.jpg" class="d-block w-100" alt="Place 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Jurong</h5>
+                        </div>
+                    </div>
+                    Add more carousel items as needed
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#placesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#placesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div> -->
+
+
+
+
+            <div class="banner">
+                <section id="dg-container" class="dg-container">
+                    <div class="dg-wrapper">
+                        <a href="#">
+                            <img src="/imgs/carousel-imgs/unsplash_viwdmfrbXfI (1).png">
+                            <h2 class="carousel-text display-4">Jurong</h2>
+                        </a>
+                        <a href="#">
+                            <img src="/imgs/carousel-imgs/2ndimg.png">
+                            <h2 class="carousel-text display-4">New York</h2>
+                        </a>
+                        <a href="#">
+                            <img src="/imgs/carousel-imgs/3rdimg.png">
+                            <h2 class="carousel-text display-4">Hong Kong</h2>
+                        </a>
+                        <a href="#">
+                            <img src="/imgs/carousel-imgs/4thimg.png">
+                            <h2 class="carousel-text display-4">Fuji</h2>
+                        </a>
+                        <a href="#">
+                            <img src="/imgs/carousel-imgs/5thimg.png">
+                            <h2 class="carousel-text display-4">Seol</h2>
+                        </a>
+                    </div>
+                    <ol style="display: none;" class="button" id="lightButton">
+                        <li index="0"></li>
+                        <li index="1"></li>
+                        <li index="2"></li>
+                        <li index="3"></li>
+                        <li index="4"></li>
+                    </ol>
+                    <!-- <nav>
+                            <i class="bi bi-arrow-left-circle-fill"></i>
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                        </nav> -->
+                </section>
+            </div>
+
+            <!-- above for carousel -->
+
+        </div>
+    </section>
+
+    <!-- Mobile Application Section -->
+    <section id="download" class="py-5">
+        <div class="text-center">
+            <h2 class="mb-5 display-5 text-decoration-underline py-2 weight700">Mobile Application</h2>
+            <div id="application-sec" class="d-flex justify-content-around align-items-center">
+                <img src="/imgs/application-cover.png" alt="App Screenshot" class="img-fluid" width="40%">
+                <div class="mt-4 d-grid">
+                    <a href="#" class="dwnl mb-4 btn text-white mx-auto rounded-5 mx-auto weight700">Download Now</a>
+                    <div class="mb-4 d-flex justify-content-between mx-auto">
+                        <a href="#" class=""><img src="/imgs/googleplay.png" alt=""></a>
+                        <a href="#" class=""><img src="/imgs/appstore.png" alt=""></a>
+                    </div>
+                    <img class="mx-auto" src="/imgs/application-mockup.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="">
+            <h2 class="d-grid text-center mb-5 display-5 text-decoration-underline py-2 weight700">Frequently Asked
+                Questions</h2>
+            <div class="accordion mx-auto" id="faqAccordion">
+                <!-- FAQ items -->
+                <div class="accordion" id="faqAccordion" style="width: 80%; margin: 0 auto;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How to use Activity Planner?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                                ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget..
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How to plan an activity?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                                ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget..
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How to schedule an activity?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                                ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget..
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How to know about places in Singapore?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                                ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget..
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What is activity planning?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                                ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget..
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more FAQ items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="">
+            <h2 class="text-center mb-5 display-5 text-decoration-underline py-2 weight700">Contact Us</h2>
+            <div class="container">
+                <img class="w-50 mx-auto" src="/imgs/contact-mockup.png" alt="">
+                <form id="contact-form" class="d-grid ms-5">
+                    <div class="row mb-3">
+                        <div class="row-md-6">
+                            <label class="fw-bold">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="row-md-6">
+                            <label class="fw-bold">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email ID" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="fw-bold">Message</label>
+                        <textarea name="message" class="form-control" rows="5" placeholder="Enter Detailed Message Here.." required></textarea>
+                    </div>
+                    <button type="submit" id="send-msg">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <section class="foot-cont1">
+            <img src="/imgs/footer-icon.png" alt="" width="15%">
+            <div class="d-grid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <i class="me-2 bi bi-geo-alt-fill" style="color: #025D07;"></i>
+                    <p style="color: #025D07;">ABC Company, 123 East, 17th Street, St. louis 10001</p>
+                </div>
+                <div class="d-flex justify-content-between my-4">
+                    <div>
+                        <i class=" bi bi-telephone-fill" style="color: #025D07;"></i>
+                        <a class=" text-decoration-none" style="color: #025D07;" href="">(123) 456-7890</a>
+                    </div>
+                    <div>
+                        <i class=" bi bi-printer-fill" style="color: #025D07;"></i>
+                        <a class=" text-decoration-none" href="" style="color: #025D07;">(123) 456-7890</a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p style="color: #025D07;">Social Media</p>
+                    <i class="bi bi-facebook" style="color: #025D07;"></i>
+                    <i class="bi bi-twitter-x" style="color: #025D07;"></i>
+                    <i class="bi bi-linkedin" style="color: #025D07;"></i>
+                    <i class="bi bi-youtube" style="color: #025D07;"></i>
+                    <i class="bi bi-instagram" style="color: #025D07;"></i>
+                    <i class="bi bi-pinterest" style="color: #025D07;"></i>
+                </div>
+            </div>
+        </section>
+        <!-- <section >
+            <img src="/imgs/footer-icon.png" alt="" class="col-2">
+            <div class="col-5">
+                <div class="row pb-5 align-items-center">
+                    <i class="col-1 bi bi-geo-alt-fill" style="color: #025D07;"></i>
+                    <p class="col-9" style="color: #025D07;">ABC Company, 123 East, 17th Street, St. louis 10001</p>
+                </div>
+                <div class="row pb-5 align-items-center ">
+                    <span class="col">
+                        <i class="col bi bi-telephone-fill" style="color: #025D07;"></i>
+                        <a class="col text-decoration-none" style="color: #025D07;" href="">(123) 456-7890</a>
+                    </span>
+                   <span class="col">
+                    <i class="col bi bi-printer-fill" style="color: #025D07;"></i>
+                    <a class="col text-decoration-none" href="" style="color: #025D07;">(123) 456-7890</a>
+                   </span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p  style="color: #025D07;">Social Media</p>
+                    <i class="bi bi-facebook" style="color: #025D07;"></i>
+                    <i class="bi bi-twitter-x" style="color: #025D07;"></i>
+                    <i class="bi bi-linkedin" style="color: #025D07;"></i>
+                    <i class="bi bi-youtube" style="color: #025D07;"></i>
+                    <i class="bi bi-instagram" style="color: #025D07;"></i>
+                    <i class="bi bi-pinterest" style="color: #025D07;"></i>
+                </div>
+            </div>
+        </section> -->
+        <hr width="90%" class="mx-auto">
+        <div class="footer-links">
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="text-decoration-none text-dark fw-semibold mx-2" href="">About us</a>
+                <a class="text-decoration-none text-dark fw-semibold mx-2" href="">Contact us</a>
+                <a class="text-decoration-none text-dark fw-semibold mx-2" href="">faq</a>
+                <a class="text-decoration-none text-dark fw-semibold mx-2" href="">Privacy Policy</a>
+                <a class="text-decoration-none text-dark fw-semibold mx-2" href="">Disclaimer</a>
+            </div>
+            <p class="text-dark">&copy; 2024 Activity Planner. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div class="fixed-buttons">
+        <button id="scrollTop" class="btn ">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <button id="scrollBottom" class="btn ">
+            <i class="bi bi-arrow-down"></i>
+        </button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+    <script src="activity.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function loadActivities(type) {
+            const apiUrl = `http://54.169.66.11:3005/api/activityRoute/one`;
+    
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ type: type })
+            })
+                .then(response => response.json())
+                .then(data => {
+    
+                    const activitiesContainer = document.getElementById('activities-container');
+                    if (!activitiesContainer) {
+                        console.error('activities-container not found in the DOM');
+                        return;
+                    }
+    
+                    activitiesContainer.innerHTML = '';
+    
+                    data.data.forEach(activity => {
+                        const activityHTML = `
+                            <div class="capsule-activity" data-type="${activity.type}">
+                                <img src="${activity.images[0].url}" alt="Activity Image" class="img-fluid">
+                                <div class="content ms-3 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h3 class="display-6 weight500">${activity.name}</h3>
+                                        <p class="px-4 py-2 bg-black text-white rounded px-4">${activity.type.charAt(0).toUpperCase() + activity.type.slice(1)}</p>
+                                    </div>
+                                    <p>${activity.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        activitiesContainer.innerHTML += activityHTML;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching activities:', error);
+                });
+        }
+    
+        window.addEventListener('DOMContentLoaded', function () {
+            loadActivities('indoor');
+        });
+    
+        window.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const formData = new FormData(contactForm);
+    
+                    fetch('http://54.169.66.11:3005/api/user/contact', {
+                        method: 'POST',
+                        body: formData,
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Success:', data);
+                            alert('Message sent successfully!');
+                            this.reset();
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('There was an error sending your message.');
+                        });
+                });
+            } else {
+                console.error('Form with ID contact-form not found');
+            }
+        });
+    </script>
+</body>
+
+</html>
